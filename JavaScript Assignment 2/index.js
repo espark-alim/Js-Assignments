@@ -9,15 +9,17 @@ function add() {
 let passValue = add();
 passValue(20);
 
-// Question 2 // working
-// var arr = [Ali = []] 
-// function recursion(data , times) {
-//     console.log(data);
-//     if (times > 0) {
-//     recursion(data, times - 2);
-//     }
-// }
-// recursion("Ali" , 2);
+// Question 2 
+
+function searchArray(arr, val) {
+    if (arr.length === 0) {
+      return false; // base case: array is empty
+    }
+    if (arr[0] === val) {
+      return true; // base case: value found
+    }
+    return searchArray(arr.slice(1), val); // recursive call with smaller array
+  }
 
 // Question 3
 
@@ -36,12 +38,40 @@ function list(item) {
 list("123");
 list("Muhammad Ali");
 
-// Question 5 // working
+// Question 5 
 
-// function set(prop,value) {
-//     var heading_2 = document.getElementsByClassName("bg");
-// }
+function changeBgColor(element, color) {
+  element.style.backgroundColor = color;
+}
 
+// Question  6 
 
+function object(key, value) {
+    let obj = { [key]: value }; 
+    console.log(obj);
+  }
+  
+  object("fname", "Muhammad"); // { fname: "Muhammad" }
+  object("lname", "Ali"); // { lname: "Ali" }
 
+// Question 7
+
+function retrives(key) {
+  let item = { name : key}
+  return item
+}
+var obj = retrives("Ali");
+console.log(obj);
+ 
+// Question 8
+
+function takeObj(value) {
+     
+  let obj = {key : value}
+     const newObj = {obj};
+     return newObj    
+}
+
+var output = takeObj("Task is Done");
+console.log(output);
 
